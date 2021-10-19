@@ -1,0 +1,42 @@
+	{
+          name: "Принять ванну",
+          isActive: true,
+          description: "Расслабиться в теплой ванне с ароматной мягкой пеной",
+          attempts: 0,
+        },
+        {
+          name: "Сходить в кафе",
+          description: "Провести пару приятных часов за чашечкой кофе",
+          isActive: false,
+          attempts: 0,
+        },
+        {
+          name: "Провести день с подругой",
+          description: "День отдыха от домашних забот в компании подруги",
+          isActive: true,
+          attempts: 0,
+        },
+        {
+          name: "Купить новое платье",
+          description: "Время для обновления гардероба!",
+          isActive: true,
+          attempts: 0,
+        },
+        {
+          name: "Не хочу готовить ужин",
+          description: "Свободный вечер для себя, а ужин можно и заказать",
+          isActive: true,
+          attempts: 0,
+        },
+        {
+          name: "Дорогой, сделай уборку",
+          description: "Жена отдыхает, а супруг наводит порядок",
+          isActive: true,
+          attempts: 0,
+        },
+        {
+          name: "Хочу чего-нибудь вкусненького",
+          description: "Побаловать себя любимым деликатесом",
+          isActive: true,
+          attempts: 0,
+        },
