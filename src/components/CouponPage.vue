@@ -43,6 +43,7 @@
 </template>
 
 <script>
+import {emailParams} from "@/func/emailParams.js"
 import ModalWindow from "@/components/ModalWindow"
 import Datepicker from "vue3-datepicker";
 import emailjs from 'emailjs-com';
@@ -54,6 +55,9 @@ export default {
       couponDate: new Date(),
       couponStatusBool: (this.couponStatus === "true"),
       isModalVisible: false,
+      emailUserId: emailParams.userId,
+      emailServiceId: emailParams.serviceId,
+      emailtemplateId: emailParams.templateId,
     };
   },
   components: {
@@ -72,17 +76,17 @@ export default {
       // console.log(getTime(this.couponDate));
       this.changeCouponStatus();
       this.couponStatusBool = false;
-      // this.sendEmail();
+      this.sendEmail();
     },
     sendEmail() {
       try {
-        emailjs.send('service_qqrjw1j', 'template_6wvjb1i',
+        emailjs.send(this.emailServiceId, this.emailtemplateId,
         {
           title: this.couponName,
-          date: this.couponDate,
+          date: this.localTime(this.couponDate),
           userName: this.loggedUserName
         },
-        'user_Au7zQfyG4GC7by48f7qjJ')
+        this.emailUserId)
 
       } catch(error) {
           console.log({error})
@@ -110,6 +114,7 @@ export default {
      }
   },
   mounted() {
+    // console.log(emailParams);
     // console.log(this.couponStatus);
     // console.log(this.couponDateFromLS);
   },

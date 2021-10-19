@@ -2,6 +2,8 @@
 node_modules
 /dist
 MCDatepicker-master.zip
+emailParams.js
+frame.png
 
 # local env files
 .env.local
